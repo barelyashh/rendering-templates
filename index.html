@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three_JS_Viewer</title>
+    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="stylesheet" href="./src/css/viewer.css">
+    <link rel="stylesheet" href="./src/bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+    <div id="list">
+
+        <hr>
+        <details close>
+            <summary>Load Model</summary>
+            <ul>
+                <div id="uploads">
+                    <li> <label for="filePath" class="btn btn-link">Browse</label>
+                        <input type="file" id="filePath" class="iconStyle" style="visibility:hidden;"
+                            onchange="WebViewer.loadModel()">
+                    </li>
+                </div>
+            </ul>
+        </details>
+        <hr>
+        <hr>
+        <details close>
+            <summary>Change Orientation View</summary>
+            <ul>
+                <div id="uploads">
+                    <li> <button title="Right" type="button" class="btn btn-link"
+                            onclick="WebViewer.switchOrientation('right')">Front</button></li>
+                    <li> <button title="Left" type="button" class="btn btn-link"
+                            onclick="WebViewer.switchOrientation('left')">Back</button></li>
+                    <li> <button title="Front" type="button" class="btn btn-link"
+                            onclick="WebViewer.switchOrientation('front')">Right</button></li>
+                    <li> <button title="Back" type="button" class="btn btn-link"
+                            onclick="WebViewer.switchOrientation('back')">Left</button></li>
+                    <li> <button title="Top" type="button" class="btn btn-link "
+                            onclick="WebViewer.switchOrientation('top')">Top</button></li>
+                    <li> <button title="Bottom" type="button" class="btn btn-link"
+                            onclick="WebViewer.switchOrientation('bottom')">Bottom</button></li>
+                    <li> <button title="Iso" type="button" class="btn btn-link"
+                            onclick="WebViewer.switchOrientation('isometric')">Isometric</button></li>
+                </div>
+            </ul>
+        </details>
+        <hr>
+        <hr>
+        <details close>
+            <summary>Apply color and Textures</summary>
+            <ul>
+                <div id="uploads">
+                    <li>Select color:</li>
+
+                    <li><input title="Color" class="iconStyle" id="color" type="color" value="#FFFF00"
+                            onchange="WebViewer.setColor()" /></li>
+                    <li>Select Texture:</li>
+                    <li>
+                        <input title="bricksButton" class="iconStyle" type="Image" id="bricksButton"
+                            src='./src/images/Textures/bricks.png' onclick="WebViewer.setTexture('bricks')"></input>
+
+                        <input title="nebulaButton" class="iconStyle" type="image" id="nebulaButton"
+                            src='./src/images/Textures/nebula.png' onclick="WebViewer.setTexture('nebula')"></input>
+
+                        <input title="texturedButton" class="iconStyle" type="image" id="texturedButton"
+                            src='./src/images/Textures/scrach.png' onclick="WebViewer.setTexture('scrach')"></input>
+
+                    </li>
+                </div>
+            </ul>
+        </details>
+        <hr>
+        <hr>
+        <details close>
+            <summary>Change Selection Type</summary>
+            <ul>
+                <div id="uploads">
+                    <li> <button title="Mesh" type="button" class="btn btn-link"
+                            onclick="WebViewer.changeSelectionLevelParameter('mesh');">Mesh</button></li>
+                    <li>
+                    <li> <button title="Face" type="button" class="btn btn-link"
+                            onclick="WebViewer.changeSelectionLevelParameter('face');">Face</button></li>
+                    <li>
+                    <li><button title="Group" type="button" class="btn btn-link"
+                            onclick="WebViewer.changeSelectionLevelParameter('group');">Group</button></li>
+                    <li>
+                </div>
+            </ul>
+        </details>
+        <hr>
+        <hr>
+        <details close>
+            <summary>Add Lights</summary>
+            <ul>
+                <div>
+                    <li>
+                        <!-- Container for lights -->
+                        <form name="form">
+                            <select id="selectedLight" name="dropdown">
+                                <option value="DirectionalLight">Directional Light</option>
+                                <option value="SpotLight">Spot Light</option>
+                                <option value="HemisphereLight">Hemisphere Light</option>
+                                <option value="PointLight">Point Light</option>
+                            </select>
+                    <li>
+                        <!-- Container for color of lights -->
+                        <div id="selectedColor">
+                            <span>Choose Color: </span>
+                            <input title="Color" class="iconStyle" id="lightColor" type="color" value="#FFFF00"
+                                style="width: 70px;" />
+                        </div>
+
+                    </li>
+                    <li>
+                        <!-- Container for position of lights -->
+                        <div id="selectedPosition">
+                            <span>Position: </span><br>
+                            <input type="number" id="positionX" value="0">
+                            <input type="number" id="positionY" value="0">
+                            <input type="number" id="positionZ" value="0">
+                        </div>
+                    </li>
+                    <button title="Add" type="button" class="addButton" onclick="displaySelected()">Add</button>
+                    <!-- Container that displays the lights added inside the scene by the user -->
+                    <li>
+                        <hr>
+                        Lights Added:
+                        <br>
+                        <select id="lightsContainer" size="50">
+
+                        </select>
+                    </li>
+                    <button title="Add" type="button" class="removeButton" onclick="removeSelected()">Remove</button>
+                </div>
+            </ul>
+        </details>
+        <hr>
+        <!-- Dynamically generated templates container -->
+        <details close>
+            <summary>Choose templates</summary>
+            <ul>
+                <div id="renderingTemplatesMenu" class="renderingTemplatesMenu">
+
+
+                </div>
+            </ul>
+        </details>
+        <hr>
+
+        <hr>
+        <!-- Dynamically generated templates container -->
+        <details close>
+            <summary>Hide/Isolate</summary>
+            <ul>
+                <li> <button title="Hide" type="button" class="btn btn-link"
+                    onclick="WebViewer.hideSelectedPart();">Hide</button></li>
+            <li>
+            <li><button title="Isolate" type="button" class="btn btn-link"
+                    onclick="WebViewer.IsolateSelectedPart();">Isolate</button></li>
+            <li>
+            
+            <li><button title="Isolate" type="button" class="btn btn-link"
+                onclick="WebViewer.unhideAllGeometry();">Show All</button></li>
+        <li>
+        </ul>
+        </details>
+        <hr>
+    </div>
+
+
+    <div id="canvas">
+         <div class="sidenav" id="Menu">
+             <input type="button" id="saveLink" value="Screenshot"> 
+        </div class="viewerImage">
+     <!--    <img class="viewerImage" src="./src/images/2.png" alt="zpmc" /> -->
+        <div id="axesTriadcanvas"></div>
+
+    </div>
+
+
+    <div id="disable">
+      
+        <script type="module">
+            import { Reflector } from "./src/scripts/lib/threeJS/Reflector.js";
+            setImportedModule(Reflector);
+        </script>
+    </div>
+
+    <script type="text/javascript" src="./src/scripts/lib/threeJS/Tween.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib//threeJS/three.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib//threeJS/TrackballControls.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib//threeJS/MTLLoader.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib//threeJS/OBJLoader.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib//threeJS/bloom/EffectComposer.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib//threeJS/bloom/RenderPass.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib//threeJS/bloom/UnrealBloomPass.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib//threeJS/bloom/LuminosityHighPassShader.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib//threeJS/bloom/CopyShader.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib//threeJS/bloom/ShaderPass.js"></script>
+    <script type="text/javascript" src="./src/jquery/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib/custom/LightManager.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib/custom/OrientationView.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib/custom/ColorsAndTextures.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib/custom/SelectionManager.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib/custom/reflectionManager.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib/custom/bloomManager.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib/custom/HideManager.js"></script>
+    <script type="text/javascript" src="./src/scripts/lib/custom/IsolateManager.js"></script>
+    <script type="text/javascript" src="./src/scripts/func/init.js"></script>
+    <script type="text/javascript" src="./src/scripts/func/menu.js"></script>
+    <script type="text/javascript" src="./src/scripts/func/renderingTemplates.js"></script>
+
+</body>
+
+</html>

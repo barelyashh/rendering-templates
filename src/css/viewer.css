@@ -1,0 +1,61 @@
+
+
+.sidenav {
+    display: none;
+    width: 95px;
+    margin-left: 5px;
+    height: 30px;
+    overflow-y: hidden;
+    top: 10px;
+    position: absolute;
+    overflow-x: hidden;
+    z-index: 2;
+    padding: 1px;
+  }
+
+  #saveLink{
+    background-image: url("../images/CaptureImage.PNG");
+    background-repeat:no-repeat;
+    cursor:pointer;
+    border: none;
+}
+  
+  #info {
+	position: absolute;
+	z-index: 1;
+}
+
+.iconStyle {
+    /* z-index: 2; */
+    height : 30px;
+    width : 30px;
+    position: relative;
+    left: 0px;
+    /* opacity: 0.30; */
+}
+  
+.iconStyle:hover {
+    height : 32px;
+    width : 32px;
+} 
+  
+.menuPopupOpen{
+    display: block;
+}
+  
+.buttonSelected{
+    filter: sepia(500%);
+    opacity: 0.7;
+}
+
+  
+  .captureImageIcon {
+    display: block;
+    width: 30px;
+    left: calc( 50% - 15px);
+    position: relative;
+  }
+
+
+
+      

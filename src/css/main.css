@@ -1,0 +1,178 @@
+
+
+div.container-fluid {
+	padding: 0px;
+}
+
+body {
+	overflow: hidden;
+	margin: 0px;
+}
+
+.row {
+	margin: -22px;
+	padding-right: 0%;
+}
+
+.checkbtn {
+	font-family: monospace;
+	color: rgb(131, 184, 241);
+}
+
+.span.label {
+	color: rgb(131, 184, 241);
+}
+
+.label1 {
+	padding-top: 10px;
+	padding-left: 40px;
+}
+
+details {
+	-family: monospace;
+	-weight: bold;
+	background: rgb(131, 184, 241);
+	color: black;
+	width: 200px;
+	border-radius: 4px;
+	margin-bottom: 5px;
+}
+
+details ul {
+	-family: monospace;
+	background: #ddd;
+	margin: 0;
+	color: black;
+	padding-left: 10px;
+	padding-top: 2px;
+	border-radius: 0 0 0 0;
+}
+
+details li {
+	margin-top: 5px;
+}
+
+.labeling {
+	padding-left: 8px;
+	-family: monospace;
+	color: black;
+	margin: 0px;
+}
+
+
+.listing {
+	padding-left: 0px;
+}
+
+li {
+	list-style: none;
+	-family: monospace;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin: 1px;
+}
+
+
+
+.btn.btn-link {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	;
+}
+
+.imaging {
+	padding-top: 30px;
+	padding-right: 20px;
+}
+
+.geo {
+	margin-bottom: 0px;
+}
+
+.btn.btn-link {
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+
+.viewerImage{
+	background-color: #ddd;
+	width: 1116px;
+	height: 657px;
+}
+
+#list {
+	width: 250px;
+	float: left;
+	height: 657px;
+	overflow-y: auto;
+}
+
+#canvas {
+	width: 1116px;
+	height: 657px;
+	margin-left: 250px;
+	margin-top: 0px;
+	padding: 0px;
+	position: static;
+}
+
+
+#info {
+	position: absolute;
+	padding-top: 10px;
+	width: 100%;
+	font-family: sans-serif;
+	padding-left: 750px;
+	box-sizing: border-box;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	z-index: 1;
+}
+
+#description {
+	font-family: monospace;
+	font-size: 15px;
+	color: rgb(75, 158, 247);
+}
+
+#userguide {
+	font-family: monospace;
+	font-size: 15px;
+	color: black;
+}
+
+select {
+    word-wrap: normal;
+    width: 175px;
+}
+
+.addButton{
+	margin-left: 130px;
+    margin-top: 7px;
+}
+
+.removeButton{
+	margin-left: 100px;
+    margin-top: 7px;
+}
+
+#lightsContainer{
+	width: 175px;
+	height: 60px;
+}
+
+#selectedPosition input{
+	background-color: transparent;
+	cursor: col-resize;
+	width: 55px;
+}
+
+#axesTriadcanvas {
+	position: absolute;
+	height: 200px;
+	width: 200px;
+	margin-top: 460px;
+}

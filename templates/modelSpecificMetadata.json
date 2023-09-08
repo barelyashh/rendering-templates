@@ -1,0 +1,249 @@
+{
+    "template1": {
+        
+        "colorsAndTextures": {
+            "Group 1": {
+                "items": [
+                    "247obj05",
+                    "247obj32"
+                ],
+                "color": "#12CDEF"
+            },
+            "Group 2": {
+                "items": [
+                    "247obj01",
+                    "247obj09"
+                ],
+                "color": "#2C12EF"
+            },
+            "Group 3": { 
+                "items": [
+                    "247obj10",
+                    "247obj14",
+                    "247obj15",
+                    "247obj17",
+                    "247obj18",
+                    "247obj19",
+                    "247obj20",
+                    "247obj21",
+                    "247obj22",
+                    "247obj23",
+                    "247obj24",
+                    "247obj25",
+                    "247obj26"
+                ],
+                "color": "#FBFBA2"
+            },
+            "Group 4": {
+                "items": [
+                    "247obj38",
+                    "247obj39",
+                    "247obj40",
+                    "247obj41",
+                    "247obj42",
+                    "247obj43",
+                    "247obj44",
+                    "247obj45",
+                    "247obj46",
+                    "247obj47",
+                    "247obj48",
+                    "247obj49",
+                    "247obj50",
+                    "247obj51"
+                ],
+                "color": "#EF1236"
+            },
+            "Group 5": {
+                "items": [
+                    "247obj13",
+                    "247obj16"
+                ],
+                "color": "#3d7f85"
+            },
+            "Group 6": {
+                "items": [
+                    "247obj07"
+                ],
+                "color": "#72510d"
+            },
+            "Group 7": {
+                "items": [
+                    "247obj34",
+                    "247obj06",
+                    "247obj28"
+                    
+                ],
+                "color": "#12EF6A"
+            }
+        }
+    
+    },
+
+    "template2": {
+       
+        "colorsAndTextures": {
+            "Group 1": {
+                "items": [
+                    "247obj05"
+                ],
+                "texture": "./src/images/Textures/bricks.png"
+            },
+            "Group 2": {
+                "items": [
+                    "247obj01",
+                    "247obj09"
+                ],
+                "color": "#17c43d"
+            },
+            "Group 3": { 
+                "items": [
+                    "247obj10",
+                    "247obj14",
+                    "247obj15",
+                    "247obj17",
+                    "247obj18",
+                    "247obj19",
+                    "247obj20",
+                    "247obj21",
+                    "247obj22",
+                    "247obj23",
+                    "247obj24",
+                    "247obj25",
+                    "247obj26"
+                ],
+                "color": "#0C2DF6"
+            },
+            "Group 4": {
+                "items": [
+                    "247obj38",
+                    "247obj39",
+                    "247obj40",
+                    "247obj41",
+                    "247obj42",
+                    "247obj43",
+                    "247obj44",
+                    "247obj45",
+                    "247obj46",
+                    "247obj47",
+                    "247obj48",
+                    "247obj49",
+                    "247obj50",
+                    "247obj51"
+                ],
+                "color": "#000000"
+            },
+            "Group 5": {
+                "items": [
+                    "247obj13",
+                    "247obj16"
+                ],
+                "color": "#3d7f85"
+            },
+            "Group 6": {
+                "items": [
+                    "247obj07"
+                ],
+                "color": "#72510d"
+            },
+            "Group 7": {
+                "items": [
+                    "247obj34",
+                    "247obj06",
+                    "247obj28"
+                    
+                ],
+                "color": "#3d7f85"
+            },
+            "Group 8": {
+                "items": [
+                    "247obj32"
+                ],
+                "texture": "./src/images/Textures/bricks.png"
+            }
+        }
+    },
+
+    "template3": {
+        "colorsAndTextures": {
+            "Group 1": {
+                "items": [
+                    "247obj05",
+                    "247obj32"
+                ],
+                "texture": "./src/images/Textures/nebula.png"
+            },
+            "Group 2": {
+                "items": [
+                    "247obj01",
+                    "247obj09"
+                ],
+                "color": "#ee8151"
+            },
+            "Group 3": { 
+                "items": [
+                    "247obj10",
+                    "247obj14",
+                    "247obj15",
+                    "247obj17",
+                    "247obj18",
+                    "247obj19",
+                    "247obj20",
+                    "247obj21",
+                    "247obj22",
+                    "247obj23",
+                    "247obj24",
+                    "247obj25",
+                    "247obj26"
+                ],
+                "color": "#85513d"
+            },
+            "Group 4": {
+                "items": [
+                    "247obj38",
+                    "247obj39",
+                    "247obj40",
+                    "247obj41",
+                    "247obj42",
+                    "247obj43",
+                    "247obj44",
+                    "247obj45",
+                    "247obj46",
+                    "247obj47",
+                    "247obj48",
+                    "247obj49",
+                    "247obj50",
+                    "247obj51"
+                ],
+                "color": "#000000"
+            },
+            "Group 5": {
+                "items": [
+                    "247obj13",
+                    "247obj16"
+                ],
+                "color": "#3d7f85"
+            },
+            "Group 6": {
+                "items": [
+                    "247obj07"
+                ],
+                "color": "#72510d"
+            },
+            "Group 7": {
+                "items": [
+                    "247obj34",
+                    "247obj06",
+                    "247obj28"
+                    
+                ],
+                "color": "#3d7f85"
+            },
+            "Group 8": {
+                "items": [
+                    "247obj32"
+                ],
+                "texture": "./src/images/Textures/nebula.png"
+            }
+        }}
+       
+}

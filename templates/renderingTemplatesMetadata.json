@@ -1,0 +1,130 @@
+{
+    "template1": {
+        "img": "./src/images/Templates/white-blue-magenta.png",
+        "lights": [
+            {
+                "type": "SpotLight",
+                "position": {
+                    "x":900,
+                    "y":900,
+                    "z":0
+                },
+                "color": "#b7bde0"
+            }
+        ],
+
+        "shadow": {
+            "enable": true,
+            "near": 0.5,
+            "far": 1024
+        },
+
+        "environmentTexture": {
+            "images": [
+                "./src/images/envMap/posx.jpg",
+                "./src/images/envMap/negx.jpg",
+                "./src/images/envMap/posy.jpg",
+                "./src/images/envMap/negy.jpg",
+                "./src/images/envMap/posz.jpg",
+                "./src/images/envMap/negz.jpg"
+            ]
+        },
+      
+        "reflection": {
+            "enable": false
+        },
+
+        "bloom": {
+            "enable": false,
+            "strength":1.5,
+            "radius":0.4,
+            "threshold":0.85
+        },
+
+        "silhouette": {
+            "enable": false
+        }
+    },
+
+    "template2": {
+        "img": "./src/images/Templates/white-green-orange.png",
+        "lights": [
+            {
+                "type": "DirectionalLight",
+                "position": {
+                    "x":800,
+                    "y":800,
+                    "z":0
+                },
+                "color": "#ff9dce"
+            }
+        ],
+
+        "shadow": {
+            "enable": true,
+            "near": 0.5,
+            "far": 1024
+        },
+
+        "background": {
+            "color": "#A2AFFB"
+        },
+
+        "reflection": {
+            "enable": false
+        },
+
+        "bloom": {
+            "enable": true,
+            "strength":1,
+            "radius":0,
+            "threshold":0
+        },
+
+        "silhouette": {
+            "enable": false
+        }
+    },
+
+    "template3": {
+        "img": "./src/images/Templates/white-red-yellow.png",
+        "lights": [
+            {
+                "type": "PointLight",
+                "position": {
+                    "x":500,
+                    "y":600,
+                    "z":500
+                },
+                "color": "#9dff9d"
+            }
+         
+        ],
+        
+        "shadow": {
+            "enable": false,
+            "near": 0.5,
+            "far": 1024
+        },
+
+        "background": {
+            "color": "#D3F3A9"
+        },
+
+        "reflection": {
+            "enable": true
+        },
+
+        "bloom": {
+            "enable": false,
+            "strength":3,
+            "radius":0.4,
+            "threshold":0.85
+            
+        },
+        
+        "silhouette": {
+            "enable": false
+        }
+    }
+}
